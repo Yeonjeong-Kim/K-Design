@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>K-Design&Publishing</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+        $(function(){
+            $('.portfolio li .ov').hide();
+            
+            
+            $('.txt p').each(function(index){
+                $(this).attr('id','txt0'+(index+1));
+            });
+            for(var i=1;i<4;i++){
+                $('#txt0'+i).delay(i*200).animate({'marginTop':'0px','opacity':'1'},400);
+            }
+
+            function move(){
+                $('.more img').animate({'margin-bottom':'0px'}).animate({'margin-bottom':'15px'},move);
+            }
+            move();
+            
+            $('.portfolio ul li').each(function(index){
+                $(this).attr('id','list_0'+(index+1));
+                $(this).css({'background':'url(img/portfoilo_'+(index+1)+'.jpg)'});
+            });
+
+            $('.portfolio ul li').hover(function(){
+                $(this).children().css({'display':'block'},400);
+            },function(){                
+                $(this).children().css({'display':'none'},400);
+            });
+
+            $("#popup").load("/inc/p_01.html");
+
+
+
+        });
+</script>
+<body>
+    <div id="popup"></div>
+    <div class="all_wrap">
+        <div class="logo"><img src="img/logo.png" alt="LOGO"/></div>
+        <div class="vis">
+            <div class="txt">
+                <p>D&nbsp;e&nbsp;s&nbsp;i&nbsp;g&nbsp;n</p> 
+                <p>&</p>
+                <p>Publishing</p>
+            </div>
+            <div class="bg">
+                <img src="img/vis_line.png" alt="vis line" />
+            </div>
+            <div class="more">
+                <img src="img/more_img.png" alt="more" />
+                <p>MORE</p>
+            </div>
+        </div>
+        <div class="portfolio">
+            <h1>PORTFOLIO</h1>
+            <ul>
+                <li>
+                    <div class="ov">
+                        <h4>WEB</h4>
+                        <p>'땡기지'<br /> 공식 홈페이지</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <h4>WEB</h4>
+                        <p>'성공회대학교'<br /> 발전기금 홈페이지</p>
+                    </div>
+                </li>
+                <li class="none">
+                    <div class="ov">
+                        <h4>Mobile</h4>
+                        <p>'땡기지'<br /> 공식 앱 UI/UX디자인</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <h4>DISPLAY</h4>
+                        <p>EBS'보니하니'<br /> 퀴즈코너 TV디스플레이</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <h4>DISPLAY</h4>
+                        <p>EBS'간다면간다'<br /><과학의날 특집> TV디스플레이</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <h4>DISPLAY</h4>
+                        <p>KBS '퀴즈 온 코리아'<br /><추석특집> TV디스플레이</p>
+                    </div>
+                </li>
+                <li class="none">
+                    <div class="ov">
+                        <h4>DISPLAY</h4>
+                        <p>대전MBC '아침이 좋다'<br />아침N퀴즈 TV디스플레이</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <h4>DISPLAY</h4>
+                        <p>베트남사업<br />퀴즈프로그램 TV디스플레이</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <h4>Mobile</h4>
+                        <p>EBS '장학퀴즈'<br />퀴즈 모바일웹</p>
+                    </div>
+                </li>
+                <li class="none">
+                    <div class="ov">
+                        <h4>DISPLAY</h4>
+                        <p>YTN'더 라이벌'<br />퀴즈프로그램 TV디스플레이</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <h4>Banner</h4>
+                        <p>배너, 광고 디자인 모음</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+            copyright(C) 2018. Kim Yeonjeong all rights reserved.
+    </footer>
+</body>
+</html>

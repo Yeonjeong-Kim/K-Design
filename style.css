@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0px; padding:0px;}
+
+body, html{
+    width:100%;
+    height:100%;
+}
+.all_wrap{
+    width:100%; 
+    margin:0px auto;
+}
+.all_wrap .vis{
+    background-image:url(img/bg01.jpg);
+    background-position:50% 50%;
+    background-color:#5f5f66;
+    background-repeat: no-repeat;
+    border-top:1px solid #fff;
+    min-height:960px;
+    position:relative;
+    z-index:0;
+}
+.all_wrap .vis .txt{
+    width:100%;
+    color:#fff;
+    font-size:50pt;
+    position:absolute;
+    text-align:center;
+    top:260px;
+}
+.all_wrap .vis .txt p{
+    padding:10px 0px;
+    margin-top:30px;
+    opacity: 0;
+}
+.all_wrap .vis .bg{
+    text-align:center;
+    margin-top:180px;
+}
+.all_wrap .vis .more{
+    position: absolute;
+    bottom:20px;
+    text-align:center;
+    width:100%;
+    color:#fff;
+}
+.all_wrap .vis .more p{
+    margin-bottom:10px;
+    font-size:14pt;
+}
+.all_wrap .logo{
+    width:100%;
+    background:rgba(0,0,0,0.5);
+    text-align:center;
+    position: absolute;
+    top:0px;
+    z-index:1;
+}
+.all_wrap .logo img{
+    padding:10px 0px;
+}
+.all_wrap .portfolio{
+    width:100%;
+    max-width:1500px;
+    margin:0px auto;
+    text-align:center;
+    padding:50px 0px;
+}
+.all_wrap .portfolio h1{
+    padding-bottom:50px;
+    font-size:22pt;
+    color:#649dff;
+    font-weight:normal;
+}
+.all_wrap .portfolio ul{
+    text-align:center;
+}
+.all_wrap .portfolio ul li{
+    width:300px;
+    height:200px;
+    display:inline-block;
+    cursor: pointer;
+}
+.all_wrap .portfolio ul li > p{
+    position:relative;
+    z-index:2;
+}
+.all_wrap .portfolio ul li.none{
+    margin-right:0px;
+}
+.all_wrap .portfolio ul li .ov{
+    width:300px;
+    height:120px;
+    color:#fff;
+    background:rgba(0,0,0,0.7);
+    text-align:center;
+    padding:40px 0px;
+    position: absolute;
+    z-index:3;
+}
+.all_wrap .portfolio ul li .ov h4{
+    font-size:16pt;
+    padding-bottom:25px;
+    margin-bottom:25px;
+    background:url(img/ov_line.png) 50% 100% no-repeat;
+}
+footer{
+    width:100%;
+    margin:0px auto;
+    padding:30px 0px;
+    font-size:9pt;
+    text-align:center;
+    background:#444;
+    color:#ccc;
+}
+
+#popup{
+    background:rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    position: fixed;
+    z-index: 999;
+}
+#popup .pop_wrap{
+    background:#fff;
+    border-radius:3px;
+    z-index:1000;
+    position:fixed;
+    overflow: scroll;
+    overflow-y:none;
+    top:20px;
+    width:50%;
+    max-width:1000px;
+    margin:0px auto;
+}
